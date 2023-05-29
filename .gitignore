@@ -1,0 +1,5 @@
+/target
+
+# Remove testing files
+*.sys
+*.txt

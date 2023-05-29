@@ -1,0 +1,47 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'uid_reader'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=uid_reader",
+					"--package=uid_reader",
+				],
+				"filter": {
+					"name": "uid_reader",
+					"kind": "bin"
+				}
+			},
+			"args": [
+				"uid.sys"
+			],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'uid_reader'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=uid_reader",
+					"--package=uid_reader"
+				],
+				"filter": {
+					"name": "uid_reader",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		}
+	]
+}

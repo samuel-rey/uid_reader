@@ -1,0 +1,9 @@
+[package]
+name = "uid_reader"
+version = "0.1.0"
+edition = "2021"
+authors = ["Samuel Rey"]
+description = "Wii uid.sys decoder"
+
+[dependencies]
+clap = { version = "4.3.0", features = ["derive"] }
