@@ -74,7 +74,7 @@ fn read_titledb(path: impl AsRef<Path>) -> Result<HashMap<String, String>, Error
             return Err(Error::ReadError);
         }
 
-        result.insert(title_id.to_owned(), human_name.to_owned());
+        result.insert(title_id[..4].to_owned(), human_name.to_owned());
     }
 
     Ok(result)
